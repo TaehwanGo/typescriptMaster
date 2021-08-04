@@ -41,3 +41,14 @@ typescript
 1. JS의 기본지식이 필수
 2. WEB API 와 같은 브라우저에 대한 지식이 필요
 3. 타입 시스템을 이해하고 있어야 함
+
+### 1-4. 필요한 준비물들 설치
+
+- vscode extensions
+- setting에서 "strict null" 검색
+  - JS/TS > Implicit Project Config : Strict Null Checks에 체크
+- 터미널 : mac은 iTerm2, 윈도우는 편한거(나는 git bash를 애용함)
+- 타입스크립트2를 설치하기 위해서 nodejs가 필요함
+  - npm이 필요함(node 설치 시 자동으로 설치 됨)
+- global로 typescript를 설치함
+  - npm install -g typescript
