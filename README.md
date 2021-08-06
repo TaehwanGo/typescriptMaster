@@ -94,3 +94,8 @@ let, const
 ### 2.4 기본 타입 정리 2(number, string, boolean, undefined, null)
 
 ### 2.5 기본 타입 정리 3(unknown, any, void, never, object)
+
+### 2.6 함수에서 타입 이용하기 (JS 💩 -> TS ✨)
+
+- 함수에서 좋은 활용 예를 알아보자
+- 타입 정의 : 안정적인 프로그래밍 + 문서화
