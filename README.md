@@ -133,3 +133,8 @@ function printArray(fruits: readonly string[]) {
 ### 2.11 필수 타입! Discriminated Union
 
 - Discriminated : 차별화 하는, 구분할 수 있는
+
+### 2.12 Intersection 타입
+
+- Union은 발생하는 모든 경우 중 한 가지만 선택하는 것 : OR
+- intersection은 그 모든 것을 다 합한 성격 : AND
