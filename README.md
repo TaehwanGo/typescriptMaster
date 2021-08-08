@@ -105,3 +105,23 @@ let, const
 - 최신 자바스크립트 문법 뿐만 아니라 타입스크립트에서만 제공하는 syntax(문법)도 사용가능
 - terminal에서 실행
   - ts-node typescript/1-types/1-2-function.ts
+
+### 2.8 배열과 튜플, 언제 튜플을 사용해야 할까?
+
+#### Array
+
+#### `number[]` vs `Array<number>`
+
+```typescript
+function printArray(fruits: readonly string[]) {
+  // 주어진 데이터를 이용해서 무언가를 출력하거나 어떤 것을 할 수 있지만
+  // 주어진 데이터를 변경하거나 업데이트 할 수 없음
+  // readonly는 Array<number>에 사용할 수 없기 때문에 이럴 땐 number[]를 사용해야 함
+}
+```
+
+#### Tuple -> interface, type alias, class
+
+- 튜플 사용은 권장하지 않음
+- 데이터 접근 할 때 배열 처럼 index로 접근하면 가독성이 떨어짐
+- object나 class가 더 가독성이 좋음
