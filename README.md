@@ -125,3 +125,11 @@ function printArray(fruits: readonly string[]) {
 - 튜플 사용은 권장하지 않음
 - 데이터 접근 할 때 배열 처럼 index로 접근하면 가독성이 떨어짐
 - object나 class가 더 가독성이 좋음
+
+### 2.9 타입스크립트의 꽃 Type Alias(앨리어스)
+
+### 2.10 진정한 타입스크립트의 시작, Union 타입
+
+### 2.11 필수 타입! Discriminated Union
+
+- Discriminated : 차별화 하는, 구분할 수 있는
