@@ -99,3 +99,9 @@ let, const
 
 - 함수에서 좋은 활용 예를 알아보자
 - 타입 정의 : 안정적인 프로그래밍 + 문서화
+
+### 2.7 함수 타입 이용 (spread, default, optional)
+
+- 최신 자바스크립트 문법 뿐만 아니라 타입스크립트에서만 제공하는 syntax(문법)도 사용가능
+- terminal에서 실행
+  - ts-node typescript/1-types/1-2-function.ts
