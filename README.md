@@ -173,3 +173,9 @@ result as string
 <string>result
 !
 ```
+
+## 3. 기본타입, 연습할 시간
+
+### 3.3. 계산기 함수 만들기(first challenge)
+
+- 다 똑같은데 throw new Error('error message') 만 다름
