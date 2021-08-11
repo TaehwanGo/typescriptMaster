@@ -184,3 +184,7 @@ result as string
 
 - 나 잘못 한것 같은데 position 값이 왜 바뀐걸로 반영되는 거지?
 - `--position.x` 때문에 position 값이 바뀐 것, `position.x + 1` 과 같이 작성하면 position값은 바뀌지 않음
+
+### 3.7 로딩 상태 표시
+
+- 엘리 답과 동일 함
