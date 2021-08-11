@@ -179,3 +179,8 @@ result as string
 ### 3.3. 계산기 함수 만들기(first challenge)
 
 - 다 똑같은데 throw new Error('error message') 만 다름
+
+### 3.5 좌표 게임
+
+- 나 잘못 한것 같은데 position 값이 왜 바뀐걸로 반영되는 거지?
+- `--position.x` 때문에 position 값이 바뀐 것, `position.x + 1` 과 같이 작성하면 position값은 바뀌지 않음
