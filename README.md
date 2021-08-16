@@ -251,3 +251,5 @@ result as string
 - pig, cat, dog는 animal class에 있는 makeSounds()라는 공통된 함수로 접근 가능
 
 ### 4.4 ~ 4.5 절차지향적으로 커피기계 만들기
+
+### 4.6 ~ 4.7 객체 지향적으로 커피기계 만들기
