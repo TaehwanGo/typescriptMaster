@@ -188,3 +188,66 @@ result as string
 ### 3.7 로딩 상태 표시
 
 - 엘리 답과 동일 함
+
+## 4. 객체지향 프로그래밍
+
+### 4.1 객체지향 소개
+
+- 객체(오브젝트) : 관련된 데이터나 코드를 함께 묶을 수 있는 것
+
+### 4.2 객체지향 개념 정리
+
+#### Imperative and Procedural Programming
+
+- 데이터와 함수들 위주로 구성 하는 것
+- 단점 : 함수가 얽혀있고 데이터가 다른 곳에서 데이터를 수정할 수 있음
+
+#### Object Oriented Programming
+
+- 프로그램을 객체로 정의해서 객체들 끼리 서로 의사소통 하도록 디자인하고 코딩하는 것
+- 서로 관련있는 데이터와 함수를 여러가지 오브젝트로 정의해서 프로그래밍 해나가는 것
+- 여러번 반복되는 것이 있다면 관련 오브젝트를 재사용 할 수도 있음
+- 새로운 기능이 필요하다면 새로운 오브젝트를 만들면 되니 확장성도 높음
+- 생산성, 퀄리티 높여 줌
+
+#### Object 구성
+
+- 데이터
+- 함수
+
+#### 클래스 vs Object
+
+- class
+  - template
+  - declare once
+  - no data in
+- object
+  - instance of a class
+  - created many times
+  - data in
+
+### 4.3 중요한 객체지향 원칙
+
+1. Encapsulation : 캡슐화
+2. Abstraction : 추상성
+3. Inheritance : 상속 - 코드의 재사용을 높임
+4. Polymorphism : 다형성
+
+#### 4.3.1. Encapsulation
+
+- 데이터와 함수를 관련있는 것 끼리 캡슐화
+
+#### 4.3.2. Abstraction
+
+- 내부의 복잡한 기능을 다 이해하지 않고 외부에서 간단한 interface를 통해 조작 가능
+
+#### 4.3.3. Inheritance
+
+- parent(super) - child(sub)
+- 부모 클래스의 상속을 받아 조금 수정하거나 새로 만들어서 코드의 재사용성을 높임
+
+#### 4.3.4. Polymorphism : 다형성
+
+- pig, cat, dog는 animal class에 있는 makeSounds()라는 공통된 함수로 접근 가능
+
+### 4.4 ~ 4.5 절차지향적으로 커피기계 만들기
