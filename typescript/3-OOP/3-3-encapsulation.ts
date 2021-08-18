@@ -44,4 +44,36 @@
   // maker.coffeeBeans = 3;
   // maker.coffeeBeans = -34; // invalid
   maker.fillCoffeeBeans(30);
+
+  class User {
+    firstName: string;
+    lastName: string;
+    // fullName: string;
+    get fullName(): string {
+      return `${this.firstName} ${this.lastName}`;
+    }
+    private internalAge = 4;
+    get age(): number {
+      return this.internalAge;
+    }
+    set age(num: number) {
+      // setter에서 유효성 검사도 가능
+      if (num < 0) {
+        console.log('나이는 0 이상이어야 합니다.');
+      }
+      this.internalAge = num;
+    }
+    constructor(firstName: string, lastName: string) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      // this.fullName = `${firstName} ${lastName}`; // firstName을 나중에 변경해도 적용이 안됨
+    }
+  }
+
+  const user = new User('Steve', 'Jobs');
+  console.log(user.fullName);
+  user.firstName = 'Tony';
+  console.log(user.fullName);
+  // user.internalAge 는 접근이 불가능하지만 setter로 user.age로 값 설정 가능
+  user.age = 6;
 }

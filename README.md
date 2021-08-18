@@ -255,3 +255,45 @@ result as string
 ### 4.6 ~ 4.7 객체 지향적으로 커피기계 만들기
 
 ### 4.8 ~ 4.9 Encapsulation 캡슐화 시켜보기
+
+### 4.10 유용한 Getter와 Setter
+
+- 일반 멤버 변수처럼 접근이 가능하지만 어떠한 계산을 해야될 때 유용함
+
+`ts-node typescript/3-OOP/3-3-encapsulation.ts`
+
+```typescript
+class User {
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  // ...
+}
+
+// 접근 할 때 멤버변수 처럼 접근을 해야함
+console.log(user.fullName);
+```
+
+```typescript
+class User {
+  private firstName: string;
+  private lastName: string;
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+}
+
+class User {
+  get fullName(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
+  constructor(private firstName: string, private lastName: string) {}
+}
+
+// 위 두 코드는 동일한 코드임
+// 생성자 안에서 멤버변수를 선언과 동시에 지정 가능
+```
