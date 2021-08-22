@@ -297,3 +297,9 @@ class User {
 // 위 두 코드는 동일한 코드임
 // 생성자 안에서 멤버변수를 선언과 동시에 지정 가능
 ```
+
+### 4.11 Abstraction 추상화 몸소 느껴보기
+
+class 안에 많은 method가 있는데 어떤 것을 먼저 실행해야 하는지 알기 쉽게 추상화(abstraction)
+
+- private으로 내부 method를 숨길 수 있음
