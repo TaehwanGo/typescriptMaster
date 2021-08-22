@@ -4,7 +4,11 @@
     hasMilk: boolean;
   };
 
-  class CoffeeMaker {
+  interface CoffeeMaker {
+    makeCoffee(shots: number): CoffeeCup;
+  }
+
+  class CoffeeMachine implements CoffeeMaker {
     private static BEANS_GRAM_PER_SHOT: number = 7; // class level로 지정이 됨
     private coffeeBeans: number = 0;
 
@@ -12,9 +16,9 @@
       this.coffeeBeans = coffeeBeans;
     }
 
-    static makeMachine(coffeeBeans: number): CoffeeMaker {
+    static makeMachine(coffeeBeans: number): CoffeeMachine {
       // constructor 대신 static method를 이용하게 권장
-      return new CoffeeMaker(coffeeBeans);
+      return new CoffeeMachine(coffeeBeans);
     }
 
     fillCoffeeBeans(beans: number) {
@@ -26,10 +30,10 @@
 
     private grindBeans(shots: number) {
       console.log(`grinding beans for ${shots}`);
-      if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAM_PER_SHOT) {
+      if (this.coffeeBeans < shots * CoffeeMachine.BEANS_GRAM_PER_SHOT) {
         throw new Error('Not enough coffee beans!!');
       }
-      this.coffeeBeans -= shots * CoffeeMaker.BEANS_GRAM_PER_SHOT;
+      this.coffeeBeans -= shots * CoffeeMachine.BEANS_GRAM_PER_SHOT;
     }
 
     private preheat(): void {
@@ -49,11 +53,11 @@
       this.preheat();
       return this.extract(shots);
 
-      // if (this.coffeeBeans < shots * CoffeeMaker.BEANS_GRAM_PER_SHOT) {
+      // if (this.coffeeBeans < shots * CoffeeMachine.BEANS_GRAM_PER_SHOT) {
       //   throw new Error('Not enough coffee beans!!');
       // }
 
-      // this.coffeeBeans -= shots * CoffeeMaker.BEANS_GRAM_PER_SHOT;
+      // this.coffeeBeans -= shots * CoffeeMachine.BEANS_GRAM_PER_SHOT;
       // return {
       //   shots,
       //   hasMilk: false,
@@ -61,9 +65,11 @@
     }
   }
 
-  const maker = CoffeeMaker.makeMachine(30);
-  // maker.coffeeBeans = 3;
-  // maker.coffeeBeans = -34; // invalid
+  const maker: CoffeeMachine = CoffeeMachine.makeMachine(30);
   maker.fillCoffeeBeans(30);
   maker.makeCoffee(2);
+
+  const maker2: CoffeeMaker = CoffeeMachine.makeMachine(30);
+  maker2.fillCoffeeBeans(30);
+  maker2.makeCoffee(2);
 }

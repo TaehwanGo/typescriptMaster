@@ -302,4 +302,8 @@ class User {
 
 class 안에 많은 method가 있는데 어떤 것을 먼저 실행해야 하는지 알기 쉽게 추상화(abstraction)
 
-- private으로 내부 method를 숨길 수 있음
+#### private으로 내부 method를 숨길 수 있음
+
+#### interface : 계약서 같은 것
+
+- type을 class로 하는 것이 아닌 interface로 해서 interface안에 있는 method만 자동완성이 되게 만드는 방법으로 추상화 가능
