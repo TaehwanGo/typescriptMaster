@@ -307,3 +307,8 @@ class 안에 많은 method가 있는데 어떤 것을 먼저 실행해야 하는
 #### interface : 계약서 같은 것
 
 - type을 class로 하는 것이 아닌 interface로 해서 interface안에 있는 method만 자동완성이 되게 만드는 방법으로 추상화 가능
+
+### 4.12 Interface 인터페이스, 모든것의 시작
+
+- class로 타입을 설정하면 public함수 모두에 접근이 가능하지만
+- interface로 타입을 설정하면 interface의 method로 접근을 제한 할 수 있음
