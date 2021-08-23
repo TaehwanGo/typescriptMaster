@@ -312,3 +312,22 @@ class 안에 많은 method가 있는데 어떤 것을 먼저 실행해야 하는
 
 - class로 타입을 설정하면 public함수 모두에 접근이 가능하지만
 - interface로 타입을 설정하면 interface의 method로 접근을 제한 할 수 있음
+
+### 4.13 ~ 14 (Inheritance)상속으로 다양한 커피 기계 만들기
+
+- interface를 상속 받을 땐 implements
+- 다른 class를 상속 받을 땐 extends
+- 상속을 하기 위해선 생성자(constructor)가 public이거나 protected이어야 함
+
+- 부모의 절차를 그대로 이용하고 싶다면 super.method();
+
+```typescript
+makeCoffee(shots: number): CoffeeCup {
+  const coffee = super.makeCoffee(shots);
+  this.steamMilk();
+  return {
+    ...coffee,
+    hasMilk: true,
+  };
+}
+```
