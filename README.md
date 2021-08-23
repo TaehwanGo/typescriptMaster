@@ -336,3 +336,53 @@ makeCoffee(shots: number): CoffeeCup {
 
 다형성의 장점 : 내부적으로 구현된 다양한 클래스들이 한가지 인터페이스를 구현하거나
 또는 부모클래스를 상속했을 때 동일한 함수를 어떤 클래스를 구분하지 않고 공통된 API를 호출할 수 있음
+
+### 4.16 상속의 문제점
+
+#### 상속의 문제점 : 족보가 꼬인다.
+
+- 중간에 것을 수정하면 상속 받는 모든 자식 클래스가 영향을 받음
+- 두개 이상 클래스를 상속받을 수 없음
+
+### 4.17 모든것을 뒤엎는 Composition ?
+
+- Favor Composition over inheritance
+  - 상속대신 컴포지션을 더 선호하라
+
+#### Composition : 구성요소들, 구성
+
+- 레고 처럼 조립해 나가는 것
+- Dependency Injection
+
+```typescript
+class CheapMilkSteamer {
+  private steamMilk(): void {
+    console.log('Steaming some milk... 🥛');
+  }
+  makeMilk(cup: CoffeeCup): CoffeeCup {
+    this.steamMilk();
+    return {
+      ...cup,
+      hasMilk: true,
+    };
+  }
+}
+
+class CaffeLatteMachine extends CoffeeMachine {
+  constructor(
+    beans: number,
+    public readonly serialNumber: string,
+    private milkFrother: CheapMilkSteamer, // DI(Dependency Injection)
+  ) {
+    super(beans);
+  }
+  makeCoffee(shots: number): CoffeeCup {
+    const coffee = super.makeCoffee(shots);
+    return this.milkFrother.makeMilk(coffee);
+  }
+}
+```
+
+- 각각의 기능별로 클래스를 따로 만들어서 필요한 곳에서 가져다 사용
+- 단점 : CheapMilkSteamer, AutomaticSugarMixer랑 굉장히 타이트하게 커플링이 되어 있음
+  - class와 class 간에 서로 잘 알고 지내는 것은 좋지 않음
