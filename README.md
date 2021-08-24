@@ -386,3 +386,12 @@ class CaffeLatteMachine extends CoffeeMachine {
 - 각각의 기능별로 클래스를 따로 만들어서 필요한 곳에서 가져다 사용
 - 단점 : CheapMilkSteamer, AutomaticSugarMixer랑 굉장히 타이트하게 커플링이 되어 있음
   - class와 class 간에 서로 잘 알고 지내는 것은 좋지 않음
+
+### 4.18 이번 챕터의 하이라이트 : 강력한 interface
+
+- class 사이에 상호작용할 경우 클래스 자신을 노출하는 것이 아니라 인터페이스(계약서)에 의거해서 서로간 상호작용을 해야 함
+
+  - decoupling의 원칙
+
+- 그렇지만 타이트한 일정내 어떤 기능을 구현해야 된다면 오버엔지니어링 할 필요는 없다.
+  - 확장하지 않아도 되는데 확장성만 너무 고려할 필요는 없다.
