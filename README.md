@@ -416,3 +416,9 @@ class CaffeLatteMachine extends CoffeeMachine {
 #### 그래도 가능하면 상속보단 composition을 이용하는 것이 확장성이 좋다.
 
 - 깊은 수직관계를 피할 수 있음
+
+## 5. 객체지향 프로그래밍 연습
+
+### 5.1 ~ 5.3 스택 직접 만들어보기 & solution
+
+- 단일 연결 리스트(singly-linked list)
