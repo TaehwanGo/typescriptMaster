@@ -422,3 +422,9 @@ class CaffeLatteMachine extends CoffeeMachine {
 ### 5.1 ~ 5.3 스택 직접 만들어보기 & solution
 
 - 단일 연결 리스트(singly-linked list)
+
+## 6. 제네릭
+
+### 6.1 제네릭 소개
+
+- 5장에서 만든 Stack을 제네릭을 이용해서 원하는 타입의 Stack으로 사용할 수 있도록 할 수 있음
