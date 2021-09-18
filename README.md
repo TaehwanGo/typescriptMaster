@@ -428,3 +428,39 @@ class CaffeLatteMachine extends CoffeeMachine {
 ### 6.1 제네릭 소개
 
 - 5장에서 만든 Stack을 제네릭을 이용해서 원하는 타입의 Stack으로 사용할 수 있도록 할 수 있음
+
+### 6.2. 함수를 제네릭 하게
+
+```typescript
+function checkNotNull<T>(arg: T | null): T {
+  if (arg == null) {
+    throw new Error('not valid number!');
+  }
+  return arg;
+}
+```
+
+- 제네릭을 사용하는 함수에 제네릭 타입을 따로 설정하지 않아도 입력된 parameter에 따라서 typescript가 알아서 타입을 정해줌(설정된 제네릭에 맞게)
+- 제네릭은 길게 쓰지 않고 대문자 하나만 사용
+  - T : TYPE의 줄임말
+  - I : ITEM
+  - V : Value
+
+### 6.3. 클래스를 제네릭 하게
+
+```typescript
+interface Either<L, R> {
+  left: () => L;
+  right: () => R;
+}
+
+class SimpleEither<L, R> implements Either<L, R> {
+  constructor(private leftValue: L, private rightValue: R) {}
+  left(): L {
+    return this.leftValue;
+  }
+  right(): R {
+    return this.rightValue;
+  }
+}
+```
