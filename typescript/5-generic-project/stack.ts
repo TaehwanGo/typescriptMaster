@@ -25,7 +25,7 @@ class StackImpl<T> implements Stack<T> {
     if (this.size === this.capacity) {
       throw new Error('Stack is full!');
     }
-    const node: StackNode<T> = { value, next: this.head }; // 새로들어온 것
+    const node = { value, next: this.head }; // head가 StackNode<T>으로 명시되었으므로 head에 node를 넣는 코드가 다음줄에 있으니 type추론을 이용하여 타입을 생략할 수 있음
     this.head = node;
     this._size++;
   }
@@ -42,11 +42,20 @@ class StackImpl<T> implements Stack<T> {
   }
 }
 
-const stack = new StackImpl(10);
+const stack = new StackImpl<string>(10);
 stack.push('tony1');
 stack.push('tony2');
 stack.push('tony3');
 
 while (stack.size !== 0) {
   console.log(stack.pop());
+}
+
+const stack2 = new StackImpl<number>(10);
+stack2.push(123);
+stack2.push(456);
+stack2.push(789);
+
+while (stack2.size !== 0) {
+  console.log(stack2.pop());
 }

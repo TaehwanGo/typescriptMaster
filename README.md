@@ -489,3 +489,5 @@ function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 ### 7.1. 제네릭 사용하기(혼자 해보기)
 
 - 4-oop-project(Stack) 을 복사 후 제네릭 적용
+
+### 7.2. 제네릭 사용하기(solution)
