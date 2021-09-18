@@ -473,3 +473,13 @@ function pay<T extends Employee>(employee: T): T {
   return employee;
 }
 ```
+
+### 6.5. 제네릭 조건 예제
+
+```typescript
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+```
+
+- object(T)의 key(K)의 type : `K extends keyof T`

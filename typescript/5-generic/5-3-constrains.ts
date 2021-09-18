@@ -34,3 +34,27 @@ bob.workPartTime();
 
 const tonyAfterPay = pay(tony);
 const bobAfterPay = pay(bob);
+
+// 6.5. 제네릭 조건 예제
+const obj = {
+  name: 'tony',
+  age: 20,
+};
+
+const obj2 = {
+  animal: '🦄',
+};
+
+// 직접 구현
+// function getValue<T extends Object>(obj: T, key: string) {
+//   return obj[key];
+// }
+
+// solution
+function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+}
+
+console.log(getValue(obj, 'name')); // 'tony' // obj와 그 key를 전달하면 value를 return하는 함수
+console.log(getValue(obj, 'age')); // 20
+console.log(getValue(obj2, 'animal')); // 🦄
