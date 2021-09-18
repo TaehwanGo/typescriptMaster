@@ -464,3 +464,12 @@ class SimpleEither<L, R> implements Either<L, R> {
   }
 }
 ```
+
+### 6.4. 제네릭 조건
+
+```typescript
+function pay<T extends Employee>(employee: T): T {
+  employee.pay();
+  return employee;
+}
+```
