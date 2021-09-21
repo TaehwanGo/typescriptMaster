@@ -491,3 +491,17 @@ function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 - 4-oop-project(Stack) 을 복사 후 제네릭 적용
 
 ### 7.2. 제네릭 사용하기(solution)
+
+## 8. 코딩 실력 향상 하기
+
+### 8.1 ~ 2. API 읽어보기
+
+- Array를 ctrl 클릭 후 오른쪽에 나오는 lib.es5.d.ts를 클릭해서 확인
+- 또는 깃허브에서도 확인 가능
+
+  - https://github.com/microsoft/TypeScript/blob/main/lib/lib.es5.d.ts
+
+- toString, toLocaleString : Object에 들어 있는 함수, 배열에서도 사용가능
+
+- concat 같이 같은 이름으로 된 것이 두 개 이상있으면 overloading이라고 함
+  - 전달되는 인자(parameter)에 따라 어떤 것이 호출될지 결정 됨
