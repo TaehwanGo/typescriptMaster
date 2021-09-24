@@ -504,4 +504,20 @@ function getValue<T, K extends keyof T>(obj: T, key: K): T[K] {
 - toString, toLocaleString : Object에 들어 있는 함수, 배열에서도 사용가능
 
 - concat 같이 같은 이름으로 된 것이 두 개 이상있으면 overloading이라고 함
+
   - 전달되는 인자(parameter)에 따라 어떤 것이 호출될지 결정 됨
+
+```typescript
+// overloading 된 method의 예시, every
+
+// every 1
+every(predicate: (value: T, index: number, array: T[]) => unknown, thisArg?: any): boolean;
+
+// every 2
+every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is S, thisArg?: any): this is S[];
+// 배열에서 사용하는 T 타입을 상속하는 서브타입인 S
+// 모든 value가 S 타입인지 아닌지 확인 하는 것
+// is : User-defined types : 타입 predicate
+```
+
+- some은 every와 달리 하나라도 만족하면 true
