@@ -544,3 +544,42 @@ every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is 
   - 최대한 어플리케이션 내부에서 해결을 하려고 하다가 정 안되면 사용자에게 알려주는 것
 - Error state : 예상할 수 있는 것(404 페이지)
 - 예상할 수 있는 문제(Error: 오류)인지 아니면 예상할 수 없는 부분(Exception : 예외)인지 구분해서 사용할 필요가 있음
+
+### 9.2 Error에 대해
+
+```typescript
+const array = new Array(100000000000000000000000000000000000123000000000000000);
+// RangeError: Invalid array length
+// RangeError는 Error클래스를 상속한 것
+```
+
+- 이 처럼 전혀 예상치 못한 이슈가 발생했을 때 쓸 수 있는 것이 에러
+
+#### 예제 : 2-types-projects-quiz/game.ts
+
+- switch문을 사용할 때에도 never type을 이용하면 모든 case를 다 작성했는지도 확인 가능
+
+```typescript
+function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
+  switch (direction) {
+    case 'up':
+      position.y += 1;
+      break;
+    case 'down':
+      position.y -= 1;
+      break;
+    case 'left':
+      position.x -= 1;
+      break;
+    case 'right':
+      position.x += 1;
+      break;
+    case 'he':
+      console.log('he');
+      break;
+    default:
+      const invalid: never = direction;
+      throw new Error(`unknown direction: ${direction}, ${invalid}`);
+  }
+}
+```

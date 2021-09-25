@@ -36,7 +36,7 @@ function move(direction: Direction): Coordination {
   }
 }
 
-function moveOfElly(direction: 'up' | 'down' | 'left' | 'right') {
+function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
   switch (direction) {
     case 'up':
       position.y += 1;
@@ -50,8 +50,12 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right') {
     case 'right':
       position.x += 1;
       break;
+    case 'he':
+      console.log('he');
+      break;
     default:
-      throw new Error(`unknown direction: ${direction}`);
+      const invalid: never = direction;
+      throw new Error(`unknown direction: ${direction}, ${invalid}`);
   }
 }
 
