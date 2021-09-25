@@ -610,3 +610,12 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
     - instanceof를 사용할 수 없음
 
 - 예상이 가능한 부분엔 throw를 남발하기 보단 ResultState를 return하는 것이 더 좋음
+
+## 10. 타입스크립트의 핵심
+
+### 10.1 막강한 타입들 소개
+
+- Advanced types
+  - Conditional types
+  - Mapped Types
+  - Utility Types
