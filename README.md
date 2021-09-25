@@ -601,3 +601,12 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
   - 에러를 받았을 때 우아하게 고급스럽게 처리하지 않는다면 catch하지 않는 것이 더 낫다.
     - 중간단계에서 깔끔하게 처리되는 것이 아니라면 마지막 사용하는 단계(App)에서 처리하도록 하는 편이 낫다.(코드를 사용하는 사람이 직접 에러처리를 할 수 있도록)
       - dialog나 alert같은 것으로 에러처리를 할 수 있음
+
+### 9.5 막강한 Error State
+
+- try-catch에서 catch에 전달되는 error는 any type임
+
+  - catch에서 error를 잡는 순간 any 타입이 돼서 type에 대한 정보가 사라짐
+    - instanceof를 사용할 수 없음
+
+- 예상이 가능한 부분엔 throw를 남발하기 보단 ResultState를 return하는 것이 더 좋음

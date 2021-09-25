@@ -3,9 +3,20 @@
 
   class OfflineError extends Error {}
 
+  type SuccessState = {
+    result: 'success';
+  };
+
+  type NetworkErrorState = {
+    result: 'fail';
+    reason: 'offline' | 'down' | 'timeout';
+  };
+
+  type ResultState = SuccessState | NetworkErrorState;
+
   class NetworkClient {
-    tryConnect(): void {
-      throw new Error('no network!');
+    tryConnect(): ResultState {
+      // throw new Error('no network!'); // 예상이 가능한 부분엔 throw를 남발하기 보단 ResultState를 return하는 것이 더 좋음
     }
   }
 
