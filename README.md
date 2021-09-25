@@ -521,3 +521,12 @@ every<S extends T>(predicate: (value: T, index: number, array: T[]) => value is 
 ```
 
 - some은 every와 달리 하나라도 만족하면 true
+
+### 8.3 오픈소스 프로젝트 이용하기
+
+- 잘 작성된 코드를 읽기만 해도 실력향상에 도움이 됨
+  - 오픈소스를 읽어보는 것도 좋음
+    - e.g., visual studio code
+  - 자주는 못 보더라도 실력을 향상하고 싶을 때 보면 좋음
+  - 라이브러리를 사용할 때도 코드를 들여다 보면 더 좋음
+  - 소스코드와 테스트는 어떤식으로 이루어지는지 확인도 가능
