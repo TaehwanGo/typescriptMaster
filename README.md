@@ -619,3 +619,19 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
   - Conditional types
   - Mapped Types
   - Utility Types
+
+### 10.2 Type Alias와 Interface 뭘 써야 할까?(기술 측면)
+
+- 0.8버전 부터 급격하게 성장해온 typescript(지금 이 시점에선 4.x 버전)
+  - 예전엔 Type Alias보다 Interface가 할 수 있는 것이 더 많았음
+- 정확하게 Type과 Interface가 어떻게 다른지
+- 어떤 곳에서 어떻것을 사용해야 되는지 알아보자
+
+#### Type vs Interface : 구현사항에 초점
+
+- class에서 Type도 implement가능한 것은 오늘 처음 알게 되었다.
+- extends 대신 &으로 Type도 확장을 할 수 있지만 결합은 Interface만 됨
+  - 두번 선언해서 나중에 사용할 때 두군데 모두의 element를 사용해야만 하도록 하는 것
+- Type만이 가능한 것들도 있음
+  - Type aliases can use computed properties
+  - Union type은 interface론 구현 불가능
