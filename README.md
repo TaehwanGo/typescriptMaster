@@ -630,8 +630,20 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
 #### Type vs Interface : 구현사항에 초점
 
 - class에서 Type도 implement가능한 것은 오늘 처음 알게 되었다.
+  - 하지만 Interface가 더 적절함
 - extends 대신 &으로 Type도 확장을 할 수 있지만 결합은 Interface만 됨
   - 두번 선언해서 나중에 사용할 때 두군데 모두의 element를 사용해야만 하도록 하는 것
 - Type만이 가능한 것들도 있음
   - Type aliases can use computed properties
   - Union type은 interface론 구현 불가능
+
+### 10.3 Type Alias 와 Interface 뭘 써야 할까?(개념 측면)
+
+- 정의부터 다시한번 짚어보자
+  - Interface : 어떤 것의 규격사항
+    - object간 의사소통을 할 때 서로간 상호작용을 도와주는 것
+    - API는 계약서와 동일
+    - 누군가가 구현해야될 사람이 있다면 interface
+    - 다른 많은 프로그래밍 언어에서도 interface를 규격사항으로 사용함
+  - Type : 어떤 데이터의 타입을 결정하는 것
+    - interface로 type을 정의하면 이것을 구현하는 class가 있는 것으로 오해할 수 있음
