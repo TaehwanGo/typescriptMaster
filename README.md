@@ -583,3 +583,14 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
   }
 }
 ```
+
+### 9.3 에러 처리의 기본 (try, catch, finally)
+
+- Error(exception) Handling : try -> catch -> finally
+- 예외 처리를 해도 앱이 죽는 경우(정말 심각한 문제인 경우)
+
+  - 메모리에 문제가 있거나
+  - 복구할 수 없는 정말 심각한 경우
+
+- try-catch를 사용해서 Error를 잡아서 앱이 죽지 않게 만들 수 있음
+- finally는 문제가 발생하든 발생하지 않든 항상 실행 됨
