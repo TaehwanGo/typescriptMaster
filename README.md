@@ -715,4 +715,26 @@ function display(todo: Readonly<ToDo>) {
 
 ### 10.9 Partial Type
 
-- `Partial<T>` : T의 각 요소를 optional로 만들어줌
+- `Partial<T>` : T의 각 요소를 optional로 만들어줌 `<->` `Required<T>`
+
+```typescript
+/**
+ * Make all properties in T optional
+ */
+type Partial<T> = {
+  [P in keyof T]?: T[P];
+};
+```
+
+### 10.10 Pick Type
+
+- 기존의 타입에서 내가 원하는 타입만 골라서 제한적으로 사용하고 싶은 경우
+
+```typescript
+/**
+ * From T, pick a set of properties whose keys are in the union K
+ */
+type Pick<T, K extends keyof T> = {
+  [P in K]: T[P];
+};
+```
