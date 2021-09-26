@@ -762,3 +762,22 @@ type Exclude<T, U> = T extends U ? never : T;
 #### 참고 문헌
 
 - [never type](https://yamoo9.gitbook.io/typescript/types/never)
+
+### 10.12 Record type
+
+```typescript
+type PageInfo = {
+  title: string;
+};
+
+type Page = 'home' | 'about' | 'contact';
+
+// Record<Page, PageInfo>
+// page를 key로 삼고, PageInfo를 value로 삼으면 됨
+// 자료구조 Map과 비슷하게 <하나, 다른하나>를 연결하고 싶을 때 사용
+const nav: Record<Page, PageInfo> = {
+  home: { title: 'home' },
+  about: { title: 'about' },
+  contact: { title: 'contact' },
+};
+```
