@@ -738,3 +738,27 @@ type Pick<T, K extends keyof T> = {
   [P in K]: T[P];
 };
 ```
+
+### 10.11 Omit Type
+
+- `Omit<T>` : Pick과 반대로 원하는 것을 뺄 수 있음
+- 빼고자 하는 것이 더 명확하다면 Omit을 사용하고
+- 선택하고자 하는 것이 더 명확하다면 Pick을 사용하자
+
+```typescript
+/**
+ * Construct a type with the properties of T except for those in type K.
+ */
+type Omit<T, K extends keyof any> = Pick<T, Exclude<keyof T, K>>;
+
+/**
+ * Exclude from T those types that are assignable to U
+ */
+type Exclude<T, U> = T extends U ? never : T;
+```
+
+- never type : 항상 오류를 출력하거나 리턴 값을 절대로 내보내지 않음을 의미
+
+#### 참고 문헌
+
+- [never type](https://yamoo9.gitbook.io/typescript/types/never)
