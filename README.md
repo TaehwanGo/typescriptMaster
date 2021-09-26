@@ -692,7 +692,7 @@ const videoOpt: VideoOptional = {
 ```typescript
 type Check<T> = T extends string ? boolean : number;
 
-type Type = Check<string>; // 이해를 위한 예시 (실제로 이렇게 사용하진 않을 듯)
+type Type = Check<'string'>; // 이해를 위한 예시 (실제로 이렇게 사용하진 않을 듯)
 ```
 
 ### 10.8 ReadOnly
@@ -712,3 +712,7 @@ function display(todo: Readonly<ToDo>) {
   todo.title = 'jaja'; // Readonly를 사용했기 때문에 에러가 발생함
 }
 ```
+
+### 10.9 Partial Type
+
+- `Partial<T>` : T의 각 요소를 optional로 만들어줌
