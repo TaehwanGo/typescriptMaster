@@ -647,3 +647,21 @@ function moveOfElly(direction: 'up' | 'down' | 'left' | 'right' | 'he') {
     - 다른 많은 프로그래밍 언어에서도 interface를 규격사항으로 사용함
   - Type : 어떤 데이터의 타입을 결정하는 것
     - interface로 type을 정의하면 이것을 구현하는 class가 있는 것으로 오해할 수 있음
+
+### 10.4 Utility Type 이란?
+
+- 타입 중 일부를 가져와서 쓸 수 있는 것
+
+### 10.5 Index Type
+
+```typescript
+// object의 value에 obj['name'] 처럼 접근 하 듯 type에서도 같은 방법으로 접근 가능
+type Animal = {
+  name: string;
+  age: number;
+  gender: 'male' | 'female';
+};
+
+type Name = Animal['name']; // string
+type Gender = Animal['gender'];
+```
