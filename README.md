@@ -694,3 +694,21 @@ type Check<T> = T extends string ? boolean : number;
 
 type Type = Check<string>; // 이해를 위한 예시 (실제로 이렇게 사용하진 않을 듯)
 ```
+
+### 10.8 ReadOnly
+
+- 인덱스 타입, 맵 타입, 컨디션 타입 => 기존 타입 보장 및 재사용
+- 10.6에서 만든 Optional이나 Readonly같은 Utility 타입은 이미 타입스크립트에 만들어져있음
+
+```typescript
+// Readonly 사용 예
+type ToDo = {
+  title: string;
+  description: string;
+};
+
+function display(todo: Readonly<ToDo>) {
+  // 보여지게만 하는 함수인데 개발자가 업데이트를 할 수 있을 수 있음(가변성) => readonly(불변성)
+  todo.title = 'jaja'; // Readonly를 사용했기 때문에 에러가 발생함
+}
+```
