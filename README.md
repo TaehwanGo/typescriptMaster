@@ -684,3 +684,13 @@ const videoOpt: VideoOptional = {
   title: 'hi', // 모든 요소가 optional로 되어 있어서 author를 사용하지 않아도 됨
 };
 ```
+
+### 10.7 Conditional Type
+
+- type에도 조건에 따라 변하는 타입을 설정할 수 있음
+
+```typescript
+type Check<T> = T extends string ? boolean : number;
+
+type Type = Check<string>; // 이해를 위한 예시 (실제로 이렇게 사용하진 않을 듯)
+```
