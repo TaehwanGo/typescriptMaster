@@ -665,3 +665,22 @@ type Animal = {
 type Name = Animal['name']; // string
 type Gender = Animal['gender'];
 ```
+
+### 10.6 Mapped Type
+
+- VideoOptional같은 파생타입을 자동으로 만들어주는 타입
+- 한번 만들어 놓으면 재사용성이 높음
+
+```typescript
+// Mapped Type
+type Optional<T> = {
+  // for...in 을 썼을 때와 동일(for...in : 하나씩 돌면서 연산을 수행)
+  [P in keyof T]?: T[P]; // P(property)는 T(Type) 안에 있는 그 key(P)에 해당하는 value(T[P])의 타입에 optional('?')을 추가로 지정
+};
+
+type VideoOptional = Optional<Video>;
+
+const videoOpt: VideoOptional = {
+  title: 'hi', // 모든 요소가 optional로 되어 있어서 author를 사용하지 않아도 됨
+};
+```
