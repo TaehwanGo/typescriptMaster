@@ -781,3 +781,8 @@ const nav: Record<Page, PageInfo> = {
   contact: { title: 'contact' },
 };
 ```
+
+### 10.13 etc
+
+- readonly, partial는 대표적으로 많이 쓰이고
+- 그 외 다른 타입들도 유용하게 쓰려고 하면 쓸 수 있음

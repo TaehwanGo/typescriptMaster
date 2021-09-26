@@ -12,3 +12,6 @@ const nav: Record<Page, PageInfo> = {
   about: { title: 'about' },
   contact: { title: 'contact' },
 };
+
+type Product = 'cat' | 'dog';
+type NewProject = Capitalize<Product>; // 대문자로 변환 - 잘 안쓰임
