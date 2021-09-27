@@ -808,3 +808,64 @@ const nav: Record<Page, PageInfo> = {
 
 Array.prototype은 Object.prototype을 상속하기 때문에
 toString같은 것을 공통으로 사용할 수 있음
+
+- 예제는 간단히 개념만을 배우기 위함이고 실제로 prototype으로 상속해서 사용하려면 더 깊이있게 알아야함
+  - 근데 그렇게 할 일 없음(요즘 브라우저들 (ES6 다됨)
+
+### 11.4 This는 왜 미친걸까요?
+
+- 자바스크립트 This가 어려운 이유
+  - 다른 프로그래밍 언어의 this와 약간 성격이 다르기 때문
+    - 다른 프로그래밍 언어의 this : 클래스 자신을 가리킴
+    - 만들어진 객체
+  - 자바스크립트의 this : 누가 호출하냐에 따라 달라짐
+    - 호출한 문맥에 따라 달라짐
+
+### 11.5 This 완벽 정리!
+
+- Javascript의 this : 호출한 사람의 문맥(context)
+
+```javascript
+function helloWorld() {
+  console.log('hello');
+}
+window.helloWorld(); // 함수는 window에서 호출이 가능함
+
+// 그러나 const, let으로 선언된 것은 window에 등록되지 않음
+const testFunc = () => {
+  console.log('testFunc123');
+  console.log(this);
+};
+window.testFunc(); // 에러 발생 : window에 등록되어 있지 않음 - 글로벌 객체에서 이용(접근)이 불가능
+
+// 예외 : var로 선언한 것은 window에 등록이 되어짐 - 재정의도 가능하고 호이스팅도 되기 때문에 가급적 사용하지 않는게 좋음
+```
+
+```javascript
+// binding method 1. bind
+class Counter {
+  count = 0;
+  increase = function () {
+    console.log(this);
+  };
+}
+class Bob {}
+bob.run = counter.increase.bind(counter);
+bob.run();
+
+// binding method 2. arrow function
+class Counter {
+  count = 0;
+  increase = function () {
+    console.log(this);
+  };
+}
+class Bob {}
+bob.run = counter.increase.bind(counter);
+bob.run();
+```
+
+- arrow function을 이용하면 그 안에 있는 this는 선언될 당시의 문맥(context)를 유지함
+
+- javascript의 this는 부르는 사람의 문맥에 따라 달라질 수 있으므로, bind를 호출하던지 아니면
+- 클래스 내부에 바인딩을 하고 싶은 함수가 있다면 arrow function을 이용해야 함
