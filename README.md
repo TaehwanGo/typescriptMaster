@@ -786,3 +786,25 @@ const nav: Record<Page, PageInfo> = {
 
 - readonly, partial는 대표적으로 많이 쓰이고
 - 그 외 다른 타입들도 유용하게 쓰려고 하면 쓸 수 있음
+
+## 11. Javascript 정리
+
+### 11.1 JS -> TS
+
+- Javascript를 알아야 Typescript도 잘한다.
+
+### 11.2 프로토타입이란?
+
+- 자바스크립트도 엄밀히 말하면 객체지향 프로그래밍 언어
+
+  - 프로토타입을 기반으로 객체지향 프로그래밍을 할 수 있기 때문
+
+- class나 interface도 compiler를 거치면 결국 프로토타입이 됨
+- 프로토타입은 상속을 위한 것
+- 단어 자체의 의미, Prototype : 추상적, 원형
+- 속성과 함수들을 정의하는 것
+
+### 11.3 프로토타입 데모
+
+Array.prototype은 Object.prototype을 상속하기 때문에
+toString같은 것을 공통으로 사용할 수 있음
