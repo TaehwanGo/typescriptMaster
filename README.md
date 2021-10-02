@@ -880,3 +880,21 @@ bob.run();
 
 - 모듈화 하지 않으면 window에 모두 등록되어서 같은 이름을 사용할 수 없음
 - 모듈화 이후 export와 import를 이용해서 사용
+
+## 12. 타입스크립트 컴파일러
+
+### 12.1. TSConfig 셋업하기 (다수의 파일 실시간 컴파일 설정)
+
+- tsc watch mode
+
+#### 파일이 변경될 때 마다 컴파일 하는 것
+
+- tsc [파일명] -w
+
+#### 여러 파일을 사용할 때
+
+- tsc --init
+  - tsconfig.json 파일 생성 됨
+  - tsc를 동작하면 tsconfig에 설정된 것에 맞게 컴파일링을 함
+  - tsc -w
+    - tsconfig가 있다면 tsconfig에 맞게 모든 ts파일을 js파일로 변환해주고 변화를 감지해서 실시간 변환을 해줌
