@@ -1047,3 +1047,66 @@ bob.run();
   - debugger for chrome
     - vscode안에서도 chrome과 연결해서 디버깅을 할 수 있도록 도와주는 앱
 - DOM이나 CSS까지 확인하려면 브라우저 개발툴이 더 좋음
+
+## 13. MOTION 실전 프로젝트 준비
+
+- notion에서 영감을 받았지만 노션과는 전혀 다른 프로젝트
+
+### 13.1 챕터 소개 및 엘리의 조언
+
+- HTML, CSS, Typescript로 구현
+- OOP
+- Type Safety
+- 자신을 --- 개발자로 한계 짓지 마라
+  - 프론트엔드, 백엔드, 모바일, 시스템 등 상관 없이 해야되는 하고 싶은 성장해 나가고 싶은 모든 것을 다루는 개발자가 되자
+- 스스로 생각하고 사고하고 문제를 해결하자
+- 스스로 프로젝트를 계획하고 사고하고 만들고 문제를 해결하고 버그를 만나면 고생하면서 진행
+
+### 13.2 프로젝트 디자인은 어떻게 구했나요?
+
+```css
+디자인 영감 Dribble: https://dribbble.com/shots/14931899-TIGERS
+
+백그라운드 이미지 만드는 사이트: https://coolbackgrounds.io/
+
+저의 백그라운드 이미지는 아래 첨부파일 다운로드 받아 보세요 :) 
+
+
+프로젝트 전반적으로 쓰인 모든 색상 코드들:
+
+:root {
+  --bg-main-color: #00000080;
+
+  --bg-accent-color: #2d2d2d;
+
+  --accent-color: #f64435;
+
+  --text-accent-color: #ffe498;
+
+  --text-edit-bg-color: #575757;
+
+  --border-color: #3f3f3f;
+
+  --shadow-color: #202020;
+
+  --document-bg-color: #68686850;
+
+  --component-bg-gradient: radial-gradient(
+    circle,
+    #646464e6 0%,
+    #363636e6 100%
+  );
+
+  --smokywhite: #dddbd8;
+
+  --black: #000000;
+
+  --translucent-black: #00000099;
+}
+```
+
+#### 사이드 프로젝트에 도움이 되는 디자인 웹 사이트 및 앱
+
+- dribbble.com
+- 크롬 웹스토어 - color picker 검색하면 나오는 것들
+- coolbackgrounds.io - 배경
