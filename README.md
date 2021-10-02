@@ -898,3 +898,29 @@ bob.run();
   - tsc를 동작하면 tsconfig에 설정된 것에 맞게 컴파일링을 함
   - tsc -w
     - tsconfig가 있다면 tsconfig에 맞게 모든 ts파일을 js파일로 변환해주고 변화를 감지해서 실시간 변환을 해줌
+
+### 12.2 프로젝트 구조 정리 하기
+
+- 컴파일된 js파일이 ts파일과 섞이지 않도록 tsconfig에서 설정 가능
+
+  - outDir
+
+- 최상위 부터 내려가면서 ts가 처음 있는 곳이 build(js가 모이는 곳)에서도 최상위로 적용 됨
+
+  - src안에만 ts가 있다면 build엔 src라는 폴더 없이 js가 컴파일되어서 들어감
+  - 반면 src폴더와 logging폴더 각각에 ts가 들어있다면 build폴더에도 src, logging이 생성되면서 각각 js가 생성 됨
+    - 보통은 최상위에서 폴더를 나누지 않음
+    - src안에서 필요에 따라 src안에 폴더를 더 생성해서 나눠서 사용함
+
+- 모든 ts파일을 src에서만 관리
+  - rootDir : "./src"
+
+#### tsconfig 추가 옵션
+
+```typescript
+// 제외하거나 포함할 파일에 대한 설정을 할 수 있음
+{
+  "compilerOptions": // ...
+  "exclude": ["./src/dev.ts"]
+}
+```
