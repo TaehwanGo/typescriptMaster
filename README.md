@@ -54,6 +54,8 @@ typescript
   - npm이 필요함(node 설치 시 자동으로 설치 됨)
 - global로 typescript를 설치함
   - npm install -g typescript
+  - npm i -g ts-node
+  - npm i -g @types/node
 
 ### 1-5. 꼭 북마크 해둬야 하는 사이트
 
