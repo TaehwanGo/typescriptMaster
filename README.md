@@ -1151,3 +1151,21 @@ google : random image generator
   - nice to have
 
 - 강의 초반에 공유한 노션을 이용해도 좋음
+
+## MOTION 실전 프로젝트 만들기 편
+
+- notion의 일부 기능을 만들어보는 프로젝트
+
+### 14.1 ~ 14.2 프로젝트 셋업 & 컴파일러 설정
+
+#### tsconfig.json 설정
+
+- tsc --init
+- module : 프론트엔드에서 작업하므로 ES2015
+- ourDir : ./build 또는 ./dist(distribution의 약자) 로 설정
+- rootDir : ./src
+- removeComments : 배포용으로 만든 컴파일된 자바스크립트엔 코멘트를 남기지 않음
+- noEmit 대신 noEmitOnError 옵션을 추가
+  - 컴파일 에러 발생 시 더 이상 컴파일 하지 않음
+- strict type checking
+- additional check : 모든 추가적인 체크 활성화
