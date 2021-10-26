@@ -1169,3 +1169,19 @@ google : random image generator
   - 컴파일 에러 발생 시 더 이상 컴파일 하지 않음
 - strict type checking
 - additional check : 모든 추가적인 체크 활성화
+
+### 14.2.1 프로젝트 구현 플랜
+
+클래스 : 상태, 데이터를 가지고 있고 그 상태를 변화할 수 있는 밀접하게 연관된 함수들로 묶어진 하나의 덩어리
+
+어플리케이션도 비슷
+
+- header, footer, document로 나눌 수 있음
+- document는 PageComponent 클래스를 만들어서 동적으로 추가된 데이터를 또 다른 컨테이너로 묶어서 페이지 않에서 추가할 수 있도록 할 예정
+- 리액트의 컴포넌트 컨셉 + 객체지향 원칙을 이용해서 유연하게 만들 수 있을지 고민
+
+App class
+
+- PageComponent
+- Dialog
+- Image, Note, Video, Todo
