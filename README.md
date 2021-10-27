@@ -1185,3 +1185,9 @@ App class
 - PageComponent
 - Dialog
 - Image, Note, Video, Todo
+
+### 14.3 레이아웃과 첫번째 Page 컴포넌트 만들기
+
+- main : 1000px 이상에서 고정
+- 기본적인 레이아웃 만들기
+- PageComponent 만들기
