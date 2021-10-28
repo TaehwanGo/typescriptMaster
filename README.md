@@ -1191,3 +1191,6 @@ App class
 - main : 1000px 이상에서 고정
 - 기본적인 레이아웃 만들기
 - PageComponent 만들기
+
+- tsc -w
+  - tsconfig가 있다면 tsconfig에 맞게 모든 ts파일을 js파일로 변환해주고 변화를 감지해서 실시간 변환을 해줌
