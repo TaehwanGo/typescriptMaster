@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Motion</title>
     <link rel="stylesheet" href="./style/styles.css" />
-    <script type="module" src="dist/main.js"></script>
+    <script type="module" src="dist/app.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__title">Motion</h1>
-      <div class="button__container">
-        <button class="add__button">IMAGE</button>
-        <button class="add__button">VIDEO</button>
-        <button class="add__button">NOTE</button>
-        <button class="add__button">TASK</button>
-      </div>
-    </header>
-    <main id="main" class="main"></main>
-    <footer class="footer">
-      Copyright by Taehwan Tony. All right reserved.
-    </footer>
+    <div class="app">
+      <header class="banner">
+        <h1 class="banner__title">Motion</h1>
+        <ul class="control-panel">
+          <li><button id="new-image" class="create-button">Image</button></li>
+          <li><button id="new-video" class="create-button">Video</button></li>
+          <li><button id="new-note" class="create-button">Note</button></li>
+          <li><button id="new-todo" class="create-button">Todo</button></li>
+        </ul>
+      </header>
+      <main id="main" class="document"></main>
+      <footer class="footer">
+        © Copyright by Taehwan Tony. All right reserved.
+      </footer>
+    </div>
   </body>
 </html>
