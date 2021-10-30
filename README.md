@@ -1194,3 +1194,12 @@ App class
 
 - tsc -w
   - tsconfig가 있다면 tsconfig에 맞게 모든 ts파일을 js파일로 변환해주고 변화를 감지해서 실시간 변환을 해줌
+
+### 14.4 ~ 14.5 레이아웃과 첫번째 Page 컴포넌트 만들기
+
+- Element.insertAdjacentElement(position, element | text)
+  - 엘리먼트에서 특정 위치에 노드 삽입
+
+#### 참고
+
+- https://powerku.tistory.com/115
