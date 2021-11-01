@@ -1203,3 +1203,12 @@ App class
 #### 참고
 
 - https://powerku.tistory.com/115
+
+### 14.6 DOM
+
+EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
+
+### 14.7 이미지 컴포넌트 만들기
+
+사용자에게 전달 받은 요소를 innerHTML로 설정하는 것은 위험함
+-> titleElement.textContent = title; // 안전하게 처리
