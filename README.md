@@ -1212,3 +1212,5 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 
 사용자에게 전달 받은 요소를 innerHTML로 설정하는 것은 위험함
 -> titleElement.textContent = title; // 안전하게 처리
+
+### 14.9 ~ 10. 컴포넌트 리팩터링(베이스 컴포넌트 만들기)
