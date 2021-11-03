@@ -1214,3 +1214,8 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 -> titleElement.textContent = title; // 안전하게 처리
 
 ### 14.9 ~ 10. 컴포넌트 리팩터링(베이스 컴포넌트 만들기)
+
+#### components
+
+- T extends HTMLElement : HTMLElement이거나 HTMLElement를 상속받는 타입(T)만 허용
+-
