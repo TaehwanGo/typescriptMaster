@@ -1218,4 +1218,7 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 #### components
 
 - T extends HTMLElement : HTMLElement이거나 HTMLElement를 상속받는 타입(T)만 허용
--
+
+### 14.11 ~ 12. 모든 섹션들 구현하기(노트편)
+
+- BaseComponent를 상속받아서 note, todo, video 컴포넌트를 만들기
