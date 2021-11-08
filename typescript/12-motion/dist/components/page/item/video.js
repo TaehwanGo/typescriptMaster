@@ -11,13 +11,23 @@ export class VideoComponent extends BaseComponent {
         `);
         const iframe = this.element.querySelector('.video__iframe');
         console.log('url', url);
-        iframe.src = `https://www.youtube.com/embed/${this.getIdFromURL(url)}`;
+        const videoURL = this.convertToEmbeddedURL(url);
+        if (!videoURL) {
+            alert('can not find video id');
+            throw new Error('can not find video id');
+        }
+        iframe.src = videoURL;
         const titleElement = this.element.querySelector('.video__title');
         titleElement.textContent = title;
     }
-    getIdFromURL(url) {
-        const urlArr = url.split('/');
-        console.log('urlArr[urlArr.length - 1]', urlArr[urlArr.length - 1]);
-        return urlArr[urlArr.length - 1];
+    convertToEmbeddedURL(url) {
+        const regExp = /^(?:https?:\/\/)?(?:www\.)?(?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))/;
+        const match = url.match(regExp);
+        console.log('convertToEmbeddedURL match', match);
+        const videoId = match ? match[1] || match[2] : undefined;
+        if (videoId) {
+            return `https://www.youtube.com/embed/${videoId}`;
+        }
+        return undefined;
     }
 }

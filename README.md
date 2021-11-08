@@ -1241,3 +1241,19 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 
 - iframe을 이용
 - embed 다음 id
+
+### 14.14 모든 섹션들 구현하기(유튜브 URL 만들기 편)
+
+- 어떤 형태의 url을 받던 id를 return 해야 됨
+
+  - https://www.youtube.com/embed/OzkHPNYruOk
+  - https://www.youtube.com/watch?v=OzkHPNYruOk
+  - https://youtu.be/OzkHPNYruOk
+
+- 정규표현식 Regex를 이용
+
+```javascript
+/^(?:https?:\/\/)?(?:www\.)?(?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))/;
+```
+
+- 정규표현식 분선 & 공부(복습)하기 -> 14.15
