@@ -15,6 +15,9 @@ class App {
         todo.attachTo(appRoot, 'beforeend');
         const video = new VideoComponent('Video Title', 'https://www.youtube.com/watch?v=OzkHPNYruOk');
         video.attachTo(appRoot, 'beforeend');
+        const testString = 'https://www.youtube.com/watch?v=OzkHPNYruOk,http';
+        const resultOfRegex = testString.match(/(http)/g);
+        console.log('resultOfRegex', resultOfRegex);
     }
 }
 new App(document.querySelector('.document'));

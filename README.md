@@ -1257,3 +1257,36 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 ```
 
 - 정규표현식 분선 & 공부(복습)하기 -> 14.15
+
+### 14.15 정규표현식 REGEX 설명
+
+- [정규표현식 테스트 사이트 : regexr.com](https://regexr.com/5l6nr)
+
+```javascript
+/^(?:https?:\/\/)?(?:www\.)?(?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))/;
+```
+
+- ? : optional
+  - http로 시작할 수도 있고 아닐 수도 있음
+- ()는 캡처링 하지 않음
+- (?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))
+
+  - 그 다음에 두 가지 그룹
+    - youtube.com으로 시작하는 것과 youtu.be로 시작하는 것
+    - 각각의 매칭결과는 그룹 1, 그룹 2로 나옴
+  - [a-zA-Z0-9-]{11}
+    - a-z또는 A-Z 또는 0-9 또는 - 를 포함하는 문자 11개
+
+- `^` : 문자열의 첫 시작이 매칭 되는지 확인
+- `(?: )` : 캡처하지 않는 그룹
+- `^(?:https?:\/\/)?` : https 또는 http로 시작할 수도 있고 아닐 수도 있음 - 캡처링하지 않는 그룹
+- `(?:www\.)?` : www. 으로 시작할 수도 있고 아닐 수도 있음 - 캡처링하지 않는 그룹
+- `(?:(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))|(?:youtu.be\/([a-zA-Z0-9-]{11})))`
+  - `()` : 캡처링 그룹
+  - `(?:youtube.com\/(?:(?:watch\?v=)|(?:embed\/))([a-zA-Z0-9-]{11}))` : 캡처링 그룹 1
+  - `(?:youtu.be\/([a-zA-Z0-9-]{11}))` : 캡처링 그룹 2
+
+#### 정규 표현식 복습
+
+- https://youtu.be/t3M6toIflyQ
+- https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Regular_Expressions

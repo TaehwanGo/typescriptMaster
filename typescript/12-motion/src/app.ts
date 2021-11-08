@@ -27,6 +27,10 @@ class App {
       'https://www.youtube.com/watch?v=OzkHPNYruOk',
     );
     video.attachTo(appRoot, 'beforeend');
+
+    const testString = 'https://www.youtube.com/watch?v=OzkHPNYruOk,http';
+    const resultOfRegex = testString.match(/(http)/g);
+    console.log('resultOfRegex', resultOfRegex);
   }
 }
 
