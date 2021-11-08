@@ -11,7 +11,7 @@ export class NoteComponent extends BaseComponent<HTMLElement> {
     `);
     const titleElement = this.element.querySelector(
       '.note__title',
-    )! as HTMLHeadElement;
+    )! as HTMLHeadingElement;
     titleElement.textContent = title; // innerHtml로 하거나 위 super에서 넣으면 XSS의 위험이 있음
 
     const bodyElement = this.element.querySelector(

@@ -1222,3 +1222,22 @@ EventTarget -> Node -> Element -> HTMLElement -> HTMLDivElement
 ### 14.11 ~ 12. 모든 섹션들 구현하기(노트편)
 
 - BaseComponent를 상속받아서 note, todo, video 컴포넌트를 만들기
+
+### 14.13 모든 섹션들 구현하기(유튜브편)
+
+- 유튜브에서 영상 우클릭 후 Copy embed code(소스 코드 복사)
+
+```HTML
+<iframe
+ width="1280"
+ height="720"
+ src="https://www.youtube.com/embed/OzkHPNYruOk"
+ title="YouTube video player"
+ frameborder="0"
+ allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+ allowfullscreen
+></iframe>
+```
+
+- iframe을 이용
+- embed 다음 id
